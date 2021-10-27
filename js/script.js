@@ -88,6 +88,7 @@ const carouselControl = document.querySelector('.carousel__control');
 let currentPos = 0;
 
 
+// Creo il ciclo con gli elementi che voglio inserire nell'HTML 
 for (let i = 0; i < databaseImage.length; i++) {
   // console.log(databaseImage[i]);
 
@@ -115,7 +116,7 @@ for (let i = 0; i < databaseImage.length; i++) {
   </div>
   `;
   // console.log(carouselMainImage.innerHTML);
-  carouselControlImage.innerHTML = `<img src="${databaseImage[i]}" alt="img1">`
+  carouselControlImage.innerHTML = `<img src="${databaseImage[i]}" alt="">`
 
   carouselMain.append(carouselMainImage);
   carouselControl.append(carouselControlImage);
@@ -123,6 +124,7 @@ for (let i = 0; i < databaseImage.length; i++) {
 }
 
 
+// Inizializzo le costanti dell'elemnto su cui voglio gestire le classi 
 const imageMain = document.getElementsByClassName('carousel__main__image');
 const imageControl = document.getElementsByClassName('carousel__control__image');
 
