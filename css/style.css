@@ -43,7 +43,7 @@
   height: 100%;
 }
 
-.carousel__main__text {
+.carousel__main__image__text{
   position: absolute;
   bottom: 10px;
   left: 0;
