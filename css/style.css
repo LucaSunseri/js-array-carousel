@@ -45,11 +45,11 @@
 
 .carousel__main__image__text{
   position: absolute;
-  bottom: 10px;
-  left: 0;
+  right: 0;
+  bottom: 0;
   color: white;
   padding: 10px;
-  text-align: right;
+  text-align: end;
 }
 
 /* control */
