@@ -1,4 +1,7 @@
 // CAROUSEL
+
+// Esercizio svolto con all'interno gli elmenti in html
+
 /*const imageMain = document.getElementsByClassName('carousel__main__image');
 const imageControl = document.getElementsByClassName('carousel__control__image');
 
@@ -44,6 +47,12 @@ slideDown.addEventListener('click',function() {
   // console.log(currentPos);
 }); */
 
+
+
+// Esercizio svolto con gli elementi in js
+
+
+// Creo i database delle immagini e dei testi con degli arrey
 const databaseImage = [
   'img/01.jpg',
   'img/02.jpg',
@@ -68,11 +77,16 @@ const captionText = [
   'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
+
+// Inizializzo le costanti dove voglio successivamente inserire i miei elementi 
 const carouselMain = document.querySelector('.carousel__main');
 // console.log(carouselMain)
 const carouselControl = document.querySelector('.carousel__control');
 
+
+// Inizializzo la variabile della poszione corrente degli elementi presenti nel mio carousel 
 let currentPos = 0;
+
 
 for (let i = 0; i < databaseImage.length; i++) {
   // console.log(databaseImage[i]);
@@ -112,28 +126,38 @@ for (let i = 0; i < databaseImage.length; i++) {
 const imageMain = document.getElementsByClassName('carousel__main__image');
 const imageControl = document.getElementsByClassName('carousel__control__image');
 
+
+// Inizializzo le costanti dei bottoni
 const slideUp = document.querySelector('.up');
 const slideDown = document.querySelector('.down');
 
+
+// Creo le funzioni al click dei bottoni
 slideUp.addEventListener('click',function() {
   // console.log(slideUp);
 
+
+  // Al click rimuovo la classe active allelemento presente 
   imageMain[currentPos].classList.remove('active');
   // console.log(imageMain[currentPos]);
-
   imageControl[currentPos].classList.remove('active');
 
+
+  // Creo la condizione che al click dell'up il contatore conta indietro e non deve mai andare oltre alla lunghezza massima degli elementi 
   currentPos--;
   if (currentPos < 0 ) {
     currentPos = imageMain.length - 1;
   }
 
+
+  // Al click aggiungo la classe active al nuovo elemento
   imageMain[currentPos].classList.add('active');
   imageControl[currentPos].classList.add('active');
 
 });
 
 
+// Stessa funzione a quella procedente solo che stavolta invece di contare indietro contiamo in avanti
 slideDown.addEventListener('click',function() {
 
   imageMain[currentPos].classList.remove('active');
