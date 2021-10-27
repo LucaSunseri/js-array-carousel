@@ -9,18 +9,25 @@ body {
   background: rgb(221, 201, 201);
 }
 
+/* HEADER */
+header {
+  height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+/* MAIN */
 .container {
   width: 60%;
-  height: 100vh;
+  height: calc(100vh - 80px);
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* CAROUSEL */
-
-/* main*/
+/* CAROUSEL main*/
 .carousel__main__image.active {
   display: block;
 }
@@ -29,6 +36,8 @@ body {
   width: 100%;
   height: 300px;
   display: flex;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .carousel__main {
@@ -56,7 +65,7 @@ body {
   text-align: end;
 }
 
-/* control */
+/* CAROUSEL control */
 .carousel__control {
   position: relative;
   width: 15%;
